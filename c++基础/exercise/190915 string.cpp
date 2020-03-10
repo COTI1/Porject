@@ -4,6 +4,8 @@
 #include <string>       
 using namespace std;
 
+
+//字符串颠倒
 void reverseString(string &s)
 {
 	int i, j;
@@ -11,6 +13,16 @@ void reverseString(string &s)
 	{
 		swap(s[i], s[j]);
 	}
+}
+
+int test1()
+{
+	string s1("ikun");
+
+	reverseString(s1);
+
+	cout << s1;
+	return 0;
 }
 
 int firstUniqchar(string s)
@@ -29,12 +41,17 @@ int firstUniqchar(string s)
 	return -1;
 }
 
-int test(string s)
+int test2()
 {
-	int num = s.rfind(' ');
+	string s;
 
-	return s.size()-1-num;
+	cin >> s;
+
+	cout << firstUniqChar(s);
+	return 0;
 }
+
+
 bool isLettleOrNumber(char ch)
 {
 	return (ch<'z'&&ch>'a') ||
@@ -42,19 +59,15 @@ bool isLettleOrNumber(char ch)
 		   (ch<'9'&&ch>'0');
 }
 
-bool Eq(char a,char b)
-{
-	return a == b ||
-		(a | 1 << 5) == (b | 1 << 5);//不区分大小写
-}
 
 
 bool isSame(char a, char b)
 {
-	return a == b || (a | 1 << 5) == (b | 1 << 5);
+	return a == b || (a | 1 << 5) == (b | 1 << 5);//不区分大小写
 }
 
 
+//判断其中包含的字母或数字是否组成回文数 即123321
 bool isPalindrome(string s)
 {
 	string tmp;
@@ -76,9 +89,24 @@ bool isPalindrome(string s)
 	return true;
 }
 
-
-
 int test3()
+{
+	string s("A man, a plan, a canal : Panama");
+	//string s("asd");
+	cout << isPalindrome(s);
+	return 0;
+}
+
+int test(string s)
+{
+	int num = s.rfind(' ');
+
+	return s.size() - 1 - num;
+}
+
+
+
+int test4()
 {
 	string str("There are two needles in this haystack with needles");
 
@@ -92,23 +120,12 @@ int test3()
 }
 
 
-int main()
-{
-	string s("A man, a plan, a canal : Panama");
-	//string s("asd");
-	cout << isPalindrome(s);
-	return 0;
-}
 
 
 
 
 
-
-
-
-
-int test2()
+int test5()
 {
 	string s1;
 
@@ -135,7 +152,7 @@ cin.getline(str, 100);//100为最大上限值
 
 
 
-int test1()
+int test6()
 
 {
 

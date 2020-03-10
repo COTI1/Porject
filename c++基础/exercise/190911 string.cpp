@@ -3,62 +3,8 @@
 #include<string>
 using namespace std;
 
-
-
-//作业：FIND RFIND SUBSTR
-
-
-
-class Test {
-	int m_a;
-public :
-	Test(int a = 0) :
-		m_a(a)
-	{
-
-	}
-	//需要返回左值时传引用
-
-	//前置++
-	Test operator ++ ()
-	{
-		m_a++;
-		return *this;
-	}
-//后置++
-	Test operator ++ (int)
-	{
-		Test tmp = *this;
-		m_a++;
-		return tmp;
-	}
-	friend ostream &operator <<(ostream &os, Test & d);
-};
-
-
-ostream &operator <<(ostream &os, Test & d)
+int main()
 {
-	os << d.m_a<<endl;
-	return os;
-}
-
-
-
-
-int dmain()
-{
-	/*
-	Test t(7);
-	cout << t << endl;
-	cout << t.operator++() << endl;
-	cout << t.operator++(1) << endl;
-*/
-
-	
-
-
-
-
 
 
 /*
@@ -90,20 +36,12 @@ int dmain()
 
 
 
-
-
-
-
-
 	string s1;
 	string s2("cai");
 	string s3=s2;
 	string s4(5,'6');
 	s4 += s3;
 	s4 += "xukun";
-
-
-
 
 
 
@@ -176,3 +114,6 @@ int dmain()
 
 	return 0;
 }
+
+
+

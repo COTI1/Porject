@@ -33,26 +33,28 @@ void A3::printB()
 	printf("%.2lf\n", b);
 }
 
-/*
+/**/
 namespace n1
 {
 	int a;
 
-	void printA() 
+	void printA()
 	{
 		printf("%d\n", a);
 	}
 }
-*/
+
 
 int main()
 {
 	printf("%d %d %d\n", sizeof(A1), sizeof(A2), sizeof(A3));
-	//printf("%p %p %p\n%p\n", &test.a, &test.b, &test.c, &test);
 	A3 test;
+	printf("%p %p %p\n%p\n", &test.a, &test.b, &test.c, &test);
 	test.a = 5;
 	test.printA();
 	test.b = 3.14;
 	test.printB();
+
+    n1::printA();
 	return 0;
 }
